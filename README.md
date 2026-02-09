@@ -1,86 +1,141 @@
-# 🛡️ Defender History Cleaner
+````
+# µLearn Backend Project
 
-A simple and safe Windows utility to clear **Microsoft Defender Protection History** using administrative permissions.
-
-This tool helps remove old or stuck protection history entries that remain even after threats are resolved.
-
----
-
-## ✨ Features
-
-- Clears Microsoft Defender Protection History
-- Uses official Windows directories only
-- Lightweight and fast
-- No Defender disabling or bypassing
-- Open-source and transparent
+Backend service for the µLearn platform.
 
 ---
 
-## ⚠️ Requirements
+## 🧰 Requirements (Install these first)
 
-- Windows 10 / Windows 11
-- **Administrator privileges** (mandatory)
+Make sure these tools are installed before setting up the project.
 
-> Microsoft Defender stores protection history in protected system folders.  
-> Running as Administrator is required to safely access and clear these files.
+### 1️⃣ Install Git  
+Download: https://git-scm.com/downloads
 
----
-
-## 🚀 How to Use
-
-1. Download or clone this repository
-2. Right-click the file and select **Run as administrator**
-3. The tool will clear Defender Protection History
-4. When prompted:
-5. Press **Y** and hit **Enter** to restart  
-(Restart is required for changes to fully apply)
+Verify installation:
+```bash
+git --version
+````
 
 ---
 
-## 🔄 Why Restart Is Required
+### 2️⃣ Install Python 3.10
 
-Some Defender services keep files locked while Windows is running.  
-A system restart ensures:
-- All Defender services reload correctly
-- Protection History is fully refreshed
-- No leftover cached entries remain
+Download Python 3.10 from:
+[https://www.python.org/downloads/release/python-3100/](https://www.python.org/downloads/release/python-3100/)
 
----
+During installation, make sure you tick:
 
-## 🔐 Security & Safety Notes
+```
+✅ Add Python to PATH
+```
 
-- ❌ Does NOT disable Microsoft Defender
-- ❌ Does NOT bypass real-time protection
-- ❌ Does NOT modify registry security policies
-- ✅ Only removes Protection History logs
-- ✅ Uses standard Windows commands
+Verify installation:
 
-This tool is intended for **maintenance and cleanup only**.
+```bash
+python --version
+```
 
 ---
 
-## 📸 Screenshots (Optional)
+## 🚀 Project Setup
 
-_Add screenshots here if you want_
+### 1️⃣ Clone the Repository
 
----
-
-## 📜 License
-
-MIT License – free to use, modify, and distribute.
-
----
-
-## 🙋‍♂️ Author
-
-**Febin Daniel**  
-B.Tech CSE | Cybersecurity Enthusiast  
-
-GitHub: https://github.com/your-username
+```bash
+git clone <repo-url>
+cd <project-folder>
+```
 
 ---
 
-## ⭐ Disclaimer
+### 2️⃣ Create Virtual Environment
 
-Use this tool responsibly.  
-The author is not responsible for misuse or unintended consequences.
+#### Windows (PowerShell)
+
+```bash
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+#### Linux / Mac
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+If activation is successful, you will see:
+
+```
+(venv)
+```
+
+in the terminal.
+
+---
+
+### 3️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 4️⃣ Set Environment Variables
+
+Create a `.env` file in the project root directory.
+
+Copy the contents from:
+
+```
+.env.sample
+```
+
+Then replace the values with your own configuration.
+
+---
+
+### 5️⃣ Apply Required Migration Script
+
+Apply the migration before running the project:
+
+👉 [https://gist.github.com/e3ob/9e1116996e1daec8df8701548eeaa528](https://gist.github.com/e3ob/9e1116996e1daec8df8701548eeaa528)
+
+---
+
+### 6️⃣ Create Required Folders
+
+Before starting the server, create the logs directory.
+
+#### Windows
+
+```bash
+mkdir logs
+```
+
+#### Linux / Mac
+
+```bash
+mkdir -p logs
+```
+
+---
+
+### 7️⃣ Run the Server
+
+```bash
+python manage.py runserver
+```
+
+The project will start at:
+
+```
+http://localhost:8000/
+```
+
+```
+
+What do you want to learn next?
+```
