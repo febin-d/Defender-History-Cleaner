@@ -1,4 +1,4 @@
-````
+
 # µLearn Backend Project
 
 Backend service for the µLearn platform.
