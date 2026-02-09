@@ -58,12 +58,6 @@ python -m venv venv
 .\venv\Scripts\Activate.ps1
 ```
 
-#### Linux / Mac
-
-```bash
-python -m venv venv
-source venv/bin/activate
-```
 
 If activation is successful, you will see:
 
@@ -115,12 +109,6 @@ Before starting the server, create the logs directory.
 mkdir logs
 ```
 
-#### Linux / Mac
-
-```bash
-mkdir -p logs
-```
-
 ---
 
 ### 7️⃣ Run the Server
@@ -135,7 +123,3 @@ The project will start at:
 http://localhost:8000/
 ```
 
-```
-
-What do you want to learn next?
-```
